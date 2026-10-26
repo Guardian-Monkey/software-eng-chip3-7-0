@@ -9,3 +9,8 @@ gem 'sinatra', '~> 4.0'
 gem 'rackup'
 # provides us with a web server to communicate with
 gem 'webrick'
+
+# this specifies to bundler that the rerun gem will only be used in development and not production
+group :development do
+  gem 'rerun'
+end
