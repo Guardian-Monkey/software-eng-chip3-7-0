@@ -13,5 +13,8 @@ RUN bundle install
 # 4. Copy the rest of your application code (app.rb, config.ru, etc.)
 COPY . .
 
+# Explicitly set the environment to production for this container
+ENV RACK_ENV=production
+
 # 5. Start the web server and bind it to 0.0.0.0 so Render can route traffic to it
 CMD ["rackup", "--host", "0.0.0.0", "--port", "10000"]
